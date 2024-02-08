@@ -1,11 +1,31 @@
+# Makefile for compiling thisdos.c
+
+# Compiler
 CC = gcc
-CFLAGS = -Wall -Wextra -O2
-TARGET = your_executable_name
 
-all: $(TARGET)
+# Compiler flags
+CFLAGS = -Wall -Wextra -std=c99
 
-$(TARGET): thisdos.c
-    $(CC) $(CFLAGS) -o $@ $<
+# Executable name
+EXEC = thisdos
 
+# Source files
+SRCS = thisdos.c
+
+# Object files
+OBJS = $(SRCS:.c=.o)
+
+# Default target
+all: $(EXEC)
+
+# Compile rule
+$(EXEC): $(OBJS)
+    $(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
+
+# Rule to compile C source files
+%.o: %.c
+    $(CC) $(CFLAGS) -c $< -o $@
+
+# Clean rule
 clean:
-    rm -f $(TARGET)
+    rm -f $(EXEC) $(OBJS)

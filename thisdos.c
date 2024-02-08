@@ -5,6 +5,7 @@
 
 
 int main(int argc, char **argv) {
+	print_program_banner();
 	int x;
 	if(argc !=3)
 		cycle_identity();
