@@ -1,10 +1,10 @@
 OBJS	= thisdos.o
 SOURCE	= thisdos.c
 HEADER	= 
-OUT	= thiddos
+OUT	= thisdos
 LFLAGS	 = -lpthread
 
-all: thiddos
+all: thisdos
 
 thiddos: $(OBJS)
 	$(CC) -o $@ $^ $(LFLAGS)
