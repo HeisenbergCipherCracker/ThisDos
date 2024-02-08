@@ -23,9 +23,9 @@ void print_red_alert_message(const char* message){
 }
 
 void print_warn_yellow_message(const char* message){
-    sprintf("\033[1;33m");
-    sprintf(message);
-    sprintf("\033[0m");
+    printf("\033[1;33m");
+    printf(message);
+    printf("\033[0m");
 }
 
 
