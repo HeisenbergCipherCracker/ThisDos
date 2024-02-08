@@ -1,6 +1,10 @@
 /* GREY HAT- Most powerful dos tool - THN contact:akshaymagicindia@gmail.com */
 #ifndef BASEDOS_H
 #define BASEDOS_H
+/*
+Reference: https://github.com/poisonhack/Blackv1/blob/master/Black1/Black.c
+
+*/
 
 
 #include <stdio.h>
