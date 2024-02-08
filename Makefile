@@ -1,31 +1,16 @@
-# Makefile for compiling thisdos.c
+OBJS	= thisdos.o
+SOURCE	= thisdos.c
+HEADER	= 
+OUT	= thiddos
+LFLAGS	 = -lpthread
 
-# Compiler
-CC = gcc
+all: thiddos
 
-# Compiler flags
-CFLAGS = -Wall -Wextra -std=c99
+thiddos: $(OBJS)
+	$(CC) -o $@ $^ $(LFLAGS)
 
-# Executable name
-EXEC = thisdos
+%.o: %.c $(HEADER)
+	$(CC) -c -o $@ $< $(LFLAGS)
 
-# Source files
-SRCS = thisdos.c
-
-# Object files
-OBJS = $(SRCS:.c=.o)
-
-# Default target
-all: $(EXEC)
-
-# Compile rule
-$(EXEC): $(OBJS)
-    $(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
-
-# Rule to compile C source files
-%.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
-
-# Clean rule
 clean:
-    rm -f $(EXEC) $(OBJS)
+	rm -f $(OBJS) $(OUT)
