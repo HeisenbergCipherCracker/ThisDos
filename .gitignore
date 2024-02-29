@@ -6,3 +6,4 @@
 *flood
 *.json
 /test+/
+*test.c
