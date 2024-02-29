@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Compile C file
-        run: gcc -o ThisDos ThisDos.c
+        run: make
 
       - name: test the program
         run: ./thisdos 
