@@ -8,7 +8,7 @@
 
 
 #define AUTHOR "Heisenberg"
-#define VERSION "1.0.0"
+#define VERSION "1.0.1"
 #define YEAR 2024
 
 const char* Source_Code = "https://github.com/HeisenbergCipherCracker/ThisDos";
