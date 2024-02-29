@@ -13,7 +13,6 @@ See https://www.gnu.org/licenses/gpl-3.0.html for details.
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include "libio/writer.h"
 
 #define USAGE(x) printf("Usage:\n%s <target_ip>\n", x)
 #define MAX_PORT_ATTEMPTS 65535
@@ -60,7 +59,6 @@ int finder_of_ports(int argc, char* argv[],const char *host)
 	return_time(timebuff);
 
 	printf("[+ %s +] Beginning port scan for target => %s\n\n", timebuff, host);
-    stream_writer("result.txt","Beginning port scan for target");
 	memset(timebuff,0,strlen(timebuff));
     // ptr,value,byte number
 
@@ -102,7 +100,6 @@ int finder_of_ports(int argc, char* argv[],const char *host)
 	return_time(timebuff);
 
     printf("\n\n[%s] SCAN FINISHED for host - %s\n", timebuff, target);
-    stream_writer("result.txt","SCAN FINISHED for host");
     
     if (client_socket != -1)
     	close(client_socket);
