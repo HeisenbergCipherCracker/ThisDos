@@ -1,0 +1,21 @@
+name: Compile C file
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name if different
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Compile C file
+        run: gcc -o ThisDos ThisDos.c
+
+      - name: test the program
+        run: ./thisdos 

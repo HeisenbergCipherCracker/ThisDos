@@ -1,5 +1,9 @@
 /* new and improved mDNS ddos script. credits go to Shroomy. */
-
+/*
+This program is licensed under the GNU General Public License v3.
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+See https://www.gnu.org/licenses/gpl-3.0.html for details.
+*/
 #include <time.h>
 #include <pthread.h>
 #include <unistd.h>
