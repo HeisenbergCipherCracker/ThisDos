@@ -5,3 +5,4 @@
 *tests
 *flood
 *.json
+/test+/
