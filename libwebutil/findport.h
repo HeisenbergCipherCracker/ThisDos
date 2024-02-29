@@ -51,14 +51,14 @@ int finder_of_ports(int argc, char* argv[],const char *host)
 	}
 
 	// Time stuff done
-	const char* target = argv[1];
+	const char* target = host;
 	char* timebuff;
 
 	timebuff = (char*)malloc(32);
 
 	return_time(timebuff);
 
-	printf("[+ %s +] Beginning port scan for target => %s\n\n", timebuff, target);
+	printf("[+ %s +] Beginning port scan for target => %s\n\n", timebuff, host);
 	memset(timebuff,0,strlen(timebuff));
 
 	// Start Socket Creation
@@ -70,7 +70,7 @@ int finder_of_ports(int argc, char* argv[],const char *host)
 
 	while (current_port < MAX_PORT_ATTEMPTS) 
 	{
-        client_socket = connect_to(target, current_port);
+        client_socket = connect_to(host, current_port);
 
         if (client_socket != -1) 
         {

