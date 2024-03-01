@@ -13,7 +13,7 @@ See https://www.gnu.org/licenses/gpl-3.0.html for details.
 
 
 #define AUTHOR "Heisenberg"
-#define VERSION "1.1.3"
+#define VERSION "1.1.5"
 #define YEAR 2024
 
 const char* Source_Code = "https://github.com/HeisenbergCipherCracker/ThisDos";
