@@ -60,4 +60,8 @@ void print_warn_yellow_message(const char* message){
 }
 
 
+void pwarn(const char*msg){
+    printf("[war]%s",msg);
+}
+
 #endif

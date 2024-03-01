@@ -31,3 +31,5 @@ void printList(struct Node* node) {
 typedef struct Real{
     double number;
 }REAL_t;
+
+typedef double REAL;
