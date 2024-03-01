@@ -10,7 +10,6 @@ See https://www.gnu.org/licenses/gpl-3.0.html for details.
 #include "libz/common.h"
 #include "libwebutil/ping.h"
 #include "libwebutil/findport.h"
-#include "libwebutil/libcurl.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -35,10 +34,8 @@ int main(int argc, char **argv) {
 		cycle_identity();
 	}
 	for(x=0; x != THREADS; x++) {
-		static count = 100;
 		if(fork())
 			attack(argv[1], argv[2], x);
-			send_curl(argv[1],count--);
 		usleep(250000);
 	}
 	getc(stdin);
