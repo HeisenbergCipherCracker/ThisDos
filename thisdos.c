@@ -31,16 +31,9 @@ int main(int argc, char **argv) {
 	print_program_banner();
 	int x;
 	for (int i = 0;i< argc;i++){
-		if (strcmp(argv[i],"--help")){
+		if (strcmp(argv[i],"--help") == 0){
 			printf(help_me);
 			exit(0);
-		}
-		if (strcmp(argv[i],"--ping")){
-			ping_host(argv[1]);
-			break;
-		}if (strcmp(argv[i],"--check-port")){
-			finder_of_ports(argc,argv,argv[1]);
-			break;
 		}
 
 

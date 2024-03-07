@@ -18,4 +18,4 @@ jobs:
         run: make
 
       - name: test the program
-        run: ./thisdos 
+        run: ./thisdos --help
