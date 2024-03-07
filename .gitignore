@@ -7,3 +7,6 @@
 *.json
 /test+/
 *test.c
+*test.c
+*test
+*.xml
