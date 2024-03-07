@@ -2,11 +2,11 @@ OBJS	= thisdos.o
 SOURCE	= thisdos.c
 HEADER	= 
 OUT	= thisdos
-LFLAGS	 = -lpthread
+LFLAGS	 = -lpthread -lstdc++
 
 all: thisdos
 
-thiddos: $(OBJS)
+thisdos: $(OBJS)
 	$(CC) -o $@ $^ $(LFLAGS)
 
 %.o: %.c $(HEADER)
