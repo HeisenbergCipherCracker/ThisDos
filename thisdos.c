@@ -16,10 +16,25 @@ See https://www.gnu.org/licenses/gpl-3.0.html for details.
 #include <stdbool.h>
 
 
+static const char first_msg[] = 
+"ThisDos Project"
+"A tool designed to perform Dos attacks,only for educational purposes, not illegal!"
+"It is user end responsibility to obey the federal laws to ensure that this program does not make any harm to any server";
+static const char help_me[] = 
+"\nfirst parameter should be target"
+"\nsecond parameter should be port to perform attack"
+"\nuse --help for help menu";
+
+
 int main(int argc, char **argv) {
+	printf(first_msg);
 	print_program_banner();
 	int x;
 	for (int i = 0;i< argc;i++){
+		if (strcmp(argv[i],"--help")){
+			printf(help_me);
+			exit(0);
+		}
 		if (strcmp(argv[i],"--ping")){
 			ping_host(argv[1]);
 			break;
