@@ -27,3 +27,5 @@ make sure you have git installed on your system.
 
 # How do i report the bugs?
 bugs will be accepted if they exists and you can report it from the github page of ThisDos. you can go to the issues tab in the github and report the bug in the clear sentence.
+
+# Power of ThisDos!!!

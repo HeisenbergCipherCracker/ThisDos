@@ -22,4 +22,7 @@ int main() {
     return 0;
 }
 
+PlaceHolderDict conf;
+PlaceHolderDict kb;
+
 #endif // DATATYPE_H
