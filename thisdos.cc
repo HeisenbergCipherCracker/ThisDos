@@ -18,9 +18,9 @@ See https://www.gnu.org/licenses/gpl-3.0.html for details.
 
 
 static const char first_msg[] = 
-"ThisDos Project"
-"A tool designed to perform Dos attacks,only for educational purposes, not illegal!"
-"It is user end responsibility to obey the federal laws to ensure that this program does not make any harm to any server";
+"\n-------------------------------------------------------------------------------------------------\n"
+"\n(!)Legal Disclaimer: A tool designed to perform Dos attacks,only for educational purposes, not illegal!"
+"\nIt is user end responsibility to obey the federal laws to ensure that this program does not make any harm to any server";
 static const char help_me[] = 
 "\nATTACK METHODS:\n"
 "\n--http/-H: Http Dos attack.\n"
@@ -32,12 +32,14 @@ int main(int argc, char **argv) {
     if (argc < 3 || strcmp(argv[1], "--help") == 0) {
         printf("Usage: %s <target> <port>\n", argv[0]);
         printf("Options:\n");
-        printf("--help: Show help menu\n");
+        printf(help_me);
+        printf(first_msg);
         exit(1);
     }
 
     printf("ThisDos Project\n");
     print_program_banner();
+    printf(first_msg);
 
     for (int i = 1; i < argc; i++) {
         if (strcmp(argv[i], "--help") == 0) {
