@@ -34,6 +34,9 @@ https://github.com/HeisenbergCipherCracker/ThisDos/assets/97875042/d652dcb6-b944
 
 
 
-https://github.com/HeisenbergCipherCracker/ThisDos/assets/97875042/cea0ae72-85a3-442a-8c00-a63d736c105c
+
+
+https://github.com/HeisenbergCipherCracker/ThisDos/assets/97875042/6d9927d5-ac02-4c6c-b898-692936a5e45e
+
 
 
