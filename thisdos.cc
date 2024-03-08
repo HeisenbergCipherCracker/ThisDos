@@ -34,7 +34,7 @@ int main(int argc, char **argv) {
         printf("Options:\n");
         printf(help_me);
         printf(first_msg);
-        exit(1);
+        exit(0);
     }
 
     printf("ThisDos Project\n");
